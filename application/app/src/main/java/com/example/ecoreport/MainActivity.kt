@@ -15,6 +15,7 @@ import android.content.Intent
 
 
 class MainActivity : AppCompatActivity() {
+    var storage = OfflineStorage();
 
     val buttons = mapOf(
         "button2" to "Нефтяной разлив",
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         val value = buttons.getValue(buttonName)
 
         val intent = Intent(this, DescriptionActivity::class.java)
-
+        storage.add(typeOfData.PROBLEM, value)
         intent.putExtra(DescriptionActivity.problemName, value)
         startActivity(intent)
     }
