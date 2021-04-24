@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+*.db-shm
+*.db
+*.opendb
+*.db-wal
+*.ipch
+*.sln
+*.vcxproj
+*.filters
+*.user
